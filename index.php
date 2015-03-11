@@ -21,6 +21,8 @@
 			<a href='#download' class='button scroll'>Download v1.2</a>
 			<a href='#features' class='meta scroll'>Take the Feature Tour &rarr;</a>
 		</div>
+
+		<div class="clear"></div>
 	</div>
 
 	<section id="features"></section>
@@ -44,7 +46,17 @@
 				<p class='subtitle'>The intelligent code suggestion/auto-completion engine for Dash.</p>
 				<p>Simply start typing and ArmaSense will suggest a list of relevant scripting commands from ArmA 2:OA and ArmA 3.</p>
 				<p>ArmaSense will also suggest any variables defined in the current file.</p>
-				<p><i>This will be hugely expanded in Dash 2.0 to include additional features such as: showing variables defined in the current project not just the current file, plus giving variables currently in scope a higher </i></p>
+				<p><i>This will be hugely expanded in Dash 2.0 to include additional features such as: showing variables defined in the current project not just the current file, plus giving variables currently in scope a higher ranking on the suggestion list.</i></p>
+			</div>
+
+			<div class="feature">
+				<h3>Built-In SQF Compiler <span>Coming soon</span></h3>
+				<img src='./img/sqf-compiler.png' class="small-screenshot right" />
+
+				<p class='subtitle'>Instant error checking without needing to start Arma</p>
+				<p>Simply click the compile button to start compiling the file you're working on to check for syntax errors.</p>
+				<p><i>This will be hugely expanded in Dash 2.0 to display compilation errors at edit-time in the style of Word's "wavy red underlines" for code sections are that are broken &mdash; as you're typing.</i></p>
+				<p><i>More info coming soon</i></p>
 			</div>
 
 			<div class="feature">
@@ -54,7 +66,7 @@
 				<p class='subtitle'>Easily hide code you're not working on</p>
 				<p>To hide code that you're not working on you have several options.</p>
 				<p>First, you can hide anything inside a set of braces ("{" and "}") by clicking the plus icon in the sidebar.</p>
-				<p>Second, you can hide any other code by creating a comment of "//#region" and "//#endregion" to hide any code between the two comments
+				<p>Second, you can hide any other code by creating two comments: "//#region" and "//#endregion" to hide any code inbetween.</p>
 			</div>
 
 			<div class="feature">
@@ -62,7 +74,7 @@
 				<img src='./img/many-files.png' class="small-screenshot right" />
 
 				<p class='subtitle'>Dash allows you to work on Arma extensions that are of any size.</p>
-				<p>From simple scripts that are comprised of a single file, to complicated extensions that run into the hundreds, Dash allows you to work quickly and effectively.</p>
+				<p>From a simple, single file script, to a complicated extension comprised of hundreds of files, Dash allows you to work quickly and effectively.</p>
 			</div>
 
 			<div class="feature">
@@ -74,12 +86,12 @@
 			</div>
 
 			<div class="feature">
-				<h3>Built-In SQF Compiler <span>Coming soon</span></h3>
-				<img src='./img/sqf-compiler.png' class="small-screenshot right" />
+				<h3>RPT File Analyser <span>Coming soon</span></h3>
+				<img src='./img/rpt-files.png' class="small-screenshot right" />
 
-				<p class='subtitle'>Quick error checking without needing to start Arma</p>
-				<p>Simply click the compile button to start compiling the file you're working on to check for syntax errors.</p>
-				<p><i>This will be hugely expanded in Dash 2.0 to display compilation errors at edit-time in the style of Word's "wavy red underlines" for code sections are that are broken &mdash; as you're typing.</i></p>
+				<p class='subtitle'>Directly open an RPT file with Dash to analyse it</p>
+				<p>Opening an RPT file in Dash will allow you to view errors quickly and easily.</p>
+				<p>It will also allow you to jump straight to the offending code, and Dash will intelligently parse the error and suggest a fix for the problem.</p>
 				<p><i>More info coming soon</i></p>
 			</div>
 
@@ -90,17 +102,6 @@
 				<p class='subtitle'>Manage your Arma extension project in a single place</p>
 				<p>Dash will allow for creating projects that contain all files associated with your extension.</p>
 				<p>It will also allow you to create PBOs and work directly inside them without the need to extract them first. Simple open the PBO in Dash and start working!</p>
-				<p><i>More info coming soon</i></p>
-			</div>
-
-
-			<div class="feature">
-				<h3>RPT File Analyser <span>Coming soon</span></h3>
-				<img src='./img/rpt-files.png' class="small-screenshot right" />
-
-				<p class='subtitle'>Directly open an RPT file with Dash to analyse it</p>
-				<p>Opening an RPT file in Dash will allow you to view errors quickly and easily.</p>
-				<p>It will also allow you to jump straight to the offending code, and Dash will intelligently parse the error and suggest a fix for the problem.</p>
 				<p><i>More info coming soon</i></p>
 			</div>
 
@@ -125,11 +126,11 @@
 
 			<div class='right download-link'>
 				<a href='#' class='button'>Download Installer</a>
-				<span class='meta'>v1.2 &bull; 1.5 MB</span>
-				<span class='meta'>Released: March 10th 2015</span>
+				<span class='meta'>v1.2 &nbsp; &bull; &nbsp; 1.5 MB</span>
+				<span class='meta'><a href='#'>Release Notes</a></span>
 			</div>
 
-			<p>You can directly download the Dash installer by clicking the link on the right.</p>
+			<p>You can directly download the Dash installer by clicking the link to the right.</p>
 			<p>Alternatively, you can find <a href='#'>Dash on Armaholic</a>.</p>
 		</div>
 	</div>
@@ -156,21 +157,22 @@
 			<div class="col">
 				<h4>About</h4>
 				<p>Dash is written in C# and developed by <a href="https://twitter.com/nevada_scout" rel="nofollow" target="_blank">nevada_scout</a>.</p>
-				<p>Dash uses a modified version of the FastColoredTextBox control created by <a href="https://github.com/PavelTorgashov" rel="nofollow" target="_blank">Pavel Torgashov</a>.</p>
+				<p>Dash uses an SQF lexer / parser written by <a href="http://charliehadden.co.uk/" rel="nofollow" target="_blank">Charlie Hadden</a>.</p>
+				<p>Dash uses a modified version of the <a href="https://github.com/PavelTorgashov/FastColoredTextBox" rel="nofollow" target="_blank">FastColoredTextBox</a> control.</p>
 			</div>
 
 			<div class="col">
 				<h4>Legal</h4>
-				<p>This website is not affiliated or authorized by Bohemia Interactive a.s. Bohemia Interactive, ArmA, DayZ and all associated logos and designs are trademarks or registered trademarks of Bohemia Interactive a.s.</p>
+				<p>This website is not affiliated with or authorized by Bohemia Interactive a.s. Bohemia Interactive, ArmA, DayZ and all associated logos and designs are trademarks or registered trademarks of Bohemia Interactive a.s.</p>
 			</div>
 
 			<p class='small-links'>
 				<a href='https://github.com/nevadascout/dash-core/issues' rel="nofollow" target="_blank">Issue Tracker</a>
+				<a href='https://github.com/nevadascout/dash-core' rel="nofollow" target="_blank">Source Code</a>
 				&bull;
 				&nbsp;
-				Dash On:
-				<a href='https://github.com/nevadascout/dash-core' class='first' rel="nofollow" target="_blank">GitHub</a>
-				<a href='#' rel="nofollow" target="_blank">Armaholic</a>
+				Find Dash On:
+				<a href='#' rel="nofollow" class='first' target="_blank">Armaholic</a>
 				<a href='#' rel="nofollow" target="_blank">Bohemia Forums</a>
 				<a href='#' rel="nofollow" target="_blank">Epoch Mod Forums</a>
 				</p>
