@@ -7,6 +7,8 @@
 	<link rel="stylesheet" href="./styles.css">
 	<script src="scroll.min.js"></script>
 
+	<link rel="icon" type="image/png" href="./favicon.ico" />
+
 </head>
 <body>
 	<div class="header home">
